@@ -11,9 +11,9 @@
     <meta name="description" content="CC - Creative Content Marketing" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald""
-    rel="stylesheet"> <link
-    href="https://fonts.googleapis.com/css2?family=Roboto"" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d5d4c8329a.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -102,6 +102,7 @@
             </p>
           </div>
         </div>
+      </section>
 
         <section class="portfolio" id="portfolio">
           <div class="center"><h1 class="section_title">portfolio</h1></div>
@@ -120,7 +121,7 @@
         <section id="about">
           <div class="center"><h1 class="section_title">o mnie</h1></div>
           <div class="info">
-            <img class="resimg" src="./img/about.png" alt="" />
+            <img class="resimg" src="./img/about.jpg" alt="">
             <p>
               Potrzebujesz naprawdę dobrego copywritera? Pisać potrafi (prawie)
               każdy, ale nie każdy powinien to robić. Tu nie chodzi wyłącznie o
@@ -128,7 +129,7 @@
               Umiejętność kojarzenia faktów, oczytanie i fachowość w dobieraniu
               odpowiednich słów, w zależności od grupy odbiorców. Sprawność w
               posługiwaniu się przekazem marketingowym. Zdolność pisania
-              językiem korzyści. I najważniejsze – wyobraźnię. <br />Dobry
+              językiem korzyści. I najważniejsze – wyobraźnię. Dobry
               copywriter napisał w swoim życiu więcej słów, niż wypowiedział.
               Piszę to pół żartem, pół serio, ale coś w tym jest. Napisałem
               wiele artykułów i opisów oraz tekstów marketingowych, takich jak
@@ -137,19 +138,23 @@
             </p>
           </div>
         </section>
-
+      <section id="contact">
+        <class class="center"><h1 class="section_title">kontakt</h1></class>
         <form class="myForm">
-          <label for="customer_name">Imię </label>
-          <input type="text" name="customer_name" id="customer_name" required />
-          <label for="email_address">Email </label>
-          <input type="email" name="email_address" id="email_address" />
-          <label for="comments">Wiadomość</label>
-          <textarea name="comments" id="comments" maxlength="600"></textarea>
-          <button class="btn">Wyślij</button>
+          <div>
+            <input type="text" name="customer_name" id="customer_name" placeholder="Imię" required/></div>
+          <div>
+            <input type="email" name="email_address" id="email_address" placeholder="Email" required/></div>
+          <div>
+            <textarea name="comments" id="comments" maxlength="10000" placeholder="Treść wiadomości" required/>
+            </textarea></div>
+          <div><button class="btn">Wyślij</button>
         </form>
       </section>
 
       <footer>
+        <a class="fb" href="https://www.facebook.com/sebastian.siwek.169"><i class="fab fa-facebook fa-3x"></i></a>
+        
         <p>Sebastian Siwek - Creative Content &copy; 2021</p>
       </footer>
     </div>

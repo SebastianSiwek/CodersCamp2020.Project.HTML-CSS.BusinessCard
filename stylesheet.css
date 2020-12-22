@@ -24,12 +24,14 @@ img {
 }
 
 .section_title {
+  text-align: center;
   text-transform: uppercase;
-  font-size: 8rem;
+  font-size: 10vw;
   font-weight: bold;
   letter-spacing: 0.2rem;
   color: #2f2e41;
   text-shadow: var(--shadow);
+  padding-bottom: 30px;
   margin: auto;
 }
 
@@ -93,7 +95,7 @@ img {
 
 /*BANNER*/
 .showcase {
-  min-height: 300px;
+  min-height: 80vh;
   background: url(./img/bulbdark.png);
   background-size: cover;
   background-position: center;
@@ -110,6 +112,7 @@ img {
   font-size: 4rem;
   margin-bottom: 0;
   color: white;
+  text-align: center;
 }
 
 .showcase p {
@@ -117,6 +120,7 @@ img {
   margin-top: 0;
   margin-bottom: 2rem;
   color: whitesmoke;
+  text-align: center;
 }
 .showcase .btn {
   margin-bottom: 2rem;
@@ -126,7 +130,7 @@ img {
 .boxes {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-columns: 1fr 1fr;
 }
 
 .boxes p {
@@ -151,14 +155,12 @@ img {
 
 /*PORTFOLIO*/
 .container {
+  padding: 0 1rem 0 1rem;
   display: grid;
   grid-gap: 1.2rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
-.portfolio img {
-  margin: 0 auto;
-}
-
 .portfolio img {
   margin: 0 auto;
 }
@@ -166,31 +168,44 @@ img {
 /*ABOUT ME*/
 .info {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 3rem;
-  margin-top: 60px;
+  grid-template-columns: auto 2fr;
+  grid-gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .info p {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  padding: 1rem;
   font-weight: 400;
-  line-height: 2rem;
+  line-height: 2.5rem;
   color: #616161;
-  padding-top: 1rem;
+  margin: 0 auto;
+  /* padding-top: 1rem;
+  padding-left: 4rem; */
 }
 .resimg {
+  margin: 0 auto; 
   padding: 0px;
-  margin: 2rem;
-  width: 100%;
-  max-height: 100%;
+  border-radius: 5%;
 }
 
 /*CONTACT*/
-.myform {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 3fr auto;
+  grid-gap: 0.4rem;
+}
+
+form div {
+  width: auto;
+  overflow: hidden;
+}
+
+input, textarea {
+  width: 100%;
+  height: 100%;
 }
 
 footer {
@@ -201,8 +216,49 @@ footer {
   margin-top: 2rem;
 }
 
+i {
+  color: #087AEA;
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@media (max-width: 1000px) {
+  .info {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .resimg {
+     align-self: center;
+    }
+  }
+
 @media (max-width: 700px) {
   .main-nav ul {
     grid-template-columns: 1fr;
+  }
+  .boxes {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    grid-template-columns: 1fr;
+    }
+  form{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 3fr auto;
   }
 }
